@@ -2,10 +2,13 @@
   "name": "smart-burmese-browser",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://amkyawdev.github.io/broswer",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "vue": "^3.3.0",
@@ -15,6 +18,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
-    "vite": "^4.5.0"
+    "vite": "^4.5.0",
+    "vite-plugin-pwa": "^0.17.4",
+    "gh-pages": "^6.0.0",
+    "@types/node": "^20.0.0"
   }
 }
